@@ -1,0 +1,147 @@
+<html>
+
+<head>
+	<title>Sign-in form</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script>
+		function validateform() {
+			var fname = document.myform.fname.value;
+			var femail = document.myform.femail.value;
+			var atposition=femail.indexOf("@");  
+            var dotposition=femail.lastIndexOf(".");
+			var fmno = document.myform.fmno.value;
+			var faddress = document.myform.faddress.value;
+			var fproduct = document.myform.fproduct.value;
+
+			if (fname == null || fname == "") {
+				alert("Name can't be blank");
+				return false;
+			}
+			else if (atposition<1 || dotposition<atposition+2 || dotposition+2>=femail.length){  
+                    alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+                    return false;  
+            }
+			else if (fmno.length != 10) {
+				alert("mobile number should be of 10 digits!");
+				return false;
+			}
+			else if (faddress == null || faddress == "") {
+				alert("Address can't be blank");
+				return false;
+			}
+			else if (fproduct == "selectproduct") {
+                alert("Please select a product");
+                return false;
+            }
+		}
+	</script>
+</head>
+<style>
+	body{
+        background-image: url("waters.jpg");
+        color:white;
+        background-repeat:no-repeat;
+        background-size:cover;
+    }
+    .form-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+	}
+
+	/* body {
+        color: black;
+        font-size: 15px;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .video-bg {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+		background-color: white;
+    } */
+
+</style>
+
+<body>
+	<div class="container">
+		<div class="form-container" style="background-color: white; color:black; padding: 30px 30px 30px 30px; border-radius:20px; border: solid black;">
+			<form name="myform" method="post"
+			action="https://script.google.com/macros/s/AKfycbwOxRy8cbBJCtV_hu_JjukprUPfTfHgS6kLD1pun4tEP-rtIa9cOdzDzcaog9XqxtIc-g/exec"
+			onsubmit="return validateform()">
+				<h2 style="text-align:center;"><u>Registration</u></h2>
+				<br>
+				Name:
+				<input type="text" placeholder="Name" name="fname" style="width: 82%;">
+				<br><br>
+				E-mail:
+				<input type="email" placeholder="E-mail" name="femail" style="width: 81%;">
+				<br><br>
+				Mobile No:
+				<input type="number" placeholder="Mobile no" name="fmno" style="width: 70%;">
+				<br><br>
+				Address:
+				<textarea type="text" placeholder="Address" name="faddress" style="width: 76%;"></textarea>
+				<br><br>
+				Choose a Product:
+				<select name="fproduct">
+					<option value="selectproduct">--Select Product--</option>
+					<option value="waterfilter">Water Filter</option>
+					<option value="gasgehser">Gas gehser</option>
+					<option value="gharghanti">Gharghanti</option>
+				</select>
+				<br><br>
+				<div class="text-center">
+					<button class="btn btn-danger" type="reset" value="reset" style="width: 40%;">Reset</button>
+					<button class="btn btn-primary" type="submit" name="submit" value="submit" style="width: 40%;">Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- <video autoplay muted loop class="video-bg">
+        <source src="waters.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+	<div class="container">
+		<form name="myform" method="post" style="justify-content:center;"
+			action="https://script.google.com/macros/s/AKfycbxo_6ocYWG2XbBs7MXrQxkzC-a-vvhW-8CXxWrHFVHOfIYxgmpxHuoXNcuqNgQDTvyR/exec"
+			onsubmit="return validateform()">
+			<div class="contain">
+			<h2>Registration</h2>
+			<br>
+			Name:
+			<input type="text" placeholder="Name" name="fname">
+			<br><br>
+			Mobile No:
+			<input type="number" placeholder="Mobile no" name="fmno">
+			<br><br>
+			E-mail:
+			<input type="email" placeholder="E-mail" name="femail">
+			<br><br>
+			<p>Already a member? <a
+					href="l1.html"
+					style="color:black;">Log
+					in</a></p>
+			<button class="btn btn-danger" type="reset" value="reset">Reset</button>
+			<button class="btn btn-primary" type="submit" value="submit">Submit</button>
+		</div>
+		</form>
+	</div> -->
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+<html>
+
+<head>
+	<title>Contact Us</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		function validateform() {
+			var femail = document.myform.femail.value;
+			var fmno = document.myform.fmno.value;
+			var fproduct = document.myform.fproduct.value;
+			var fcomplaint = document.myform.fcomplaint.value;
+
+			if (femail == null || femail == "") {
+				alert("E-mail can't be blank");
+				return false;
+			}
+			else if (fmno.length != 10) {
+				alert("Mobile number should be of 10 digits!");
+				return false;
+			}
+			else if (fproduct == "selectproduct") {
+                alert("Please select a product");
+                return false;
+            }
+			else if (fcomplaint == null || fcomplaint == "") {
+				alert("Complaint No can't be blank");
+				return false;
+			}
+		}  
+	</script>
+</head>
+<style>
+	/*footer*/
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+	body {
+		line-height: 1.5;
+		font-family: 'Poppins', sans-serif;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	.container {
+		max-width: 1170px;
+	}
+
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	.footer {
+		background-color: #24262b;
+		padding: 70px 0;
+	}
+
+	.footer-col {
+		width: 25%;
+		padding: 0 15px;
+	}
+
+	.footer-col h4 {
+		font-size: 18px;
+		color: #ffffff;
+		text-transform: capitalize;
+		margin-bottom: 35px;
+		font-weight: 500;
+		position: relative;
+	}
+
+	.footer-col h4::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -10px;
+		background-color: #e91e63;
+		height: 2px;
+		box-sizing: border-box;
+		width: 50px;
+	}
+
+	.footer-col ul li:not(:last-child) {
+		margin-bottom: 10px;
+	}
+
+	.footer-col ul li a {
+		font-size: 16px;
+		text-transform: capitalize;
+		color: #ffffff;
+		text-decoration: none;
+		font-weight: 300;
+		color: #bbbbbb;
+		display: block;
+		transition: all 0.3s ease;
+	}
+
+	.footer-col ul li a:hover {
+		color: #ffffff;
+		padding-left: 8px;
+	}
+
+	/*responsive*/
+	@media(max-width: 767px) {
+		.footer-col {
+			width: 50%;
+			margin-bottom: 30px;
+		}
+	}
+
+	@media(max-width: 574px) {
+		.footer-col {
+			width: 100%;
+		}
+	}
+
+	.social-icons {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		padding: 15px 0;
+		margin-top: 10px;
+		margin-bottom: 20px;
+
+	}
+
+	.social-icons li {
+		margin: 0 30px;
+		width: 50px;
+		height: 50px;
+		background: #f0ecec;
+		border-radius: 50%;
+		transition: var(--transition);
+		cursor: pointer;
+		margin-top: 5px;
+		box-shadow: 1px 2px 2px 2px #dcdde1;
+	}
+
+	.social-icons li i {
+		transition: all 0.1s linear;
+	}
+
+	.social-icons li:hover {
+		transform: scale(1.2);
+		background: #fff;
+	}
+
+	.fa-whatsapp:hover {
+		background: white;
+		color: rgb(54, 250, 4);
+	}
+
+	.fa-facebook:hover {
+		background: white;
+		color: rgb(28, 4, 243);
+	}
+
+	.fa-instagram:hover {
+		background: white;
+		color: #e84393;
+	}
+
+	.fa-youtube:hover {
+		background: white;
+		color: #FF0000;
+	}
+	.flex-container {
+        display: flex;
+        background-color: black;
+        border:10px solid white;
+    }
+
+    .flex-container > div {
+        background-color: #f1f1f1;
+        margin:5px;
+        padding: 20px;
+        width: 50%;
+        height:550px;
+    }
+    form{
+        /* margin-top:50px; */
+        padding-top: 30px;
+        padding-right: 60px;
+        padding-bottom: 60px;
+        padding-left: 60px;
+		justify-content: center;
+    }
+</style>
+
+<body>
+	<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+		<div class="container-fluid justify-content-end">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="index.html">Home</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="about.html">About US</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">
+							Media
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item " href="gallery.html">Gallery</a>
+							<a class="dropdown-item " href="video.html">Video</a>
+						</div>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="service.html">Service</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="certificate.html">Certificate</a>
+					</li>
+					<li class="nav-item Active">
+						<a class="nav-link" href="contact.html">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="flex-container">
+		<div>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119030.6055938707!2d72.70614524335936!3d21.203818199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0044480a91%3A0xf86e54c8262190af!2sKrishna%20Sales%20%26%20Service!5e0!3m2!1sen!2sin!4v1716450697781!5m2!1sen!2sin" 
+			width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+			referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+		<div>
+			<div class="form-container">
+				<form class="cform" name="myform" method="post"
+					action="https://script.google.com/macros/s/AKfycbxdVX7GJVfnmyWoM1ZzNaH8MPP1EN7GdqEvPp8BhgML-jyE0zibL7xBle1YTe29THB2GA/exec"
+					onsubmit="return validateform()">
+					<h2 style="text-align: center;"><u>Contact us</u></h2>
+					<br>
+					E-mail:
+					<input type="email" placeholder="E-mail" name="femail" style="width: 85%;">
+					<br><br>
+					Mobile No:
+					<input type="number" placeholder="Mobile No" name="fmno" style="width: 80%;">
+					<br><br>
+					Choose a Product:
+					<select name="fproduct">
+						<option value="selectproduct">--Select Product--</option>
+						<option value="waterfilter">Water Filter</option>
+						<option value="gasgehser">Gas gehser</option>
+						<option value="gharghanti">Gharghanti</option>
+					</select>
+					<br><br>
+					Enter Your Complaint:
+					<textarea type="text" placeholder="Complaint" name="fcomplaint" style="width: 62%;"></textarea>
+					<br><br>
+					<div class="text-center">
+						<button class="btn btn-danger" type="reset" value="reset" style="width: 40%;">Reset</button>
+						<button class="btn btn-primary" id="submitBtn" type="submit" value="submit" style="width: 40%;">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="container">
+		<form class="cform" name="myform" method="post"
+			action="https://script.google.com/macros/s/AKfycbzw-CYDW-DhOMLsshy4ezDVxpeedw8t9iohV1QlXkBu88d_AGNxiBTcF0158lIHoDrBeQ/exec"
+			onsubmit="return validateform()">
+			<h2><u>Contact us</u></h2>
+			<br>
+			E-mail:
+			<input type="email" placeholder="E-mail" name="femail">
+			<br><br>
+			Mobile No:
+			<input type="number" placeholder="Mobile No" name="fmno">
+			<br><br>
+			<input type="checkbox" name="wf"> Water filter<br>
+			<input type="checkbox" name="gg"> Gas geyser<br>
+			<input type="checkbox" name="g"> Gharghanti
+			<br><br>
+			Enter Your Complaint:
+			<textarea type="text" placeholder="Complaint" name="fcomplaint"></textarea>
+			<br><br>
+			<button class="btn btn-danger" type="reset" value="reset">Reset</button>
+			<button class="btn btn-primary" id="submitBtn" type="submit" value="submit">Submit</button>
+		</form>
+	</div><br> -->
+	<!--start footer-->
+	<footer>
+		<p style="color:white; text-align: center; background-color: black; padding: 15px 0;">&copy; Copyright
+			2024 <a href="index.html" style="color: white;">Himanshu Parmar</a></p>
+	</footer>
+	<!--end footer-->
+	<script type="text/javascript" src="cform.js"></script>
+</body>
+
+</html>
